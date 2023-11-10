@@ -27,11 +27,6 @@
                 array[indexOfMaxNumberBetweenLeftAndRight] = array[index];
                 array[index] = temp;
                 index = indexOfMaxNumberBetweenLeftAndRight;
-                foreach (var item in array)
-                {
-                    Console.Write(item + " ");
-                }
-                Console.WriteLine();
             }
             else break;
         }
@@ -42,18 +37,12 @@
         while(index != 0)
         {
             int parent = (index - 1) / 2;
-            Console.WriteLine("[" + parent + " , "+ index + "]");
             if (array[parent] < array[index])
             {
                 int temp = array[parent];
                 array[parent] = array[index];
                 array[index] = temp;
                 index = parent;
-                foreach (var item in array)
-                {
-                    Console.Write(item + " ");
-                }
-                Console.WriteLine();
             }
             else break;
         }
